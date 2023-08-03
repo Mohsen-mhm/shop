@@ -3,7 +3,7 @@
 @section('card')
     <div class="row mx-auto">
         <div class="w-100 d-flex justify-content-center align-items-center mb-3">
-            <img src="{{ $user->avatar == '' ? '/storage/avatars/default-avatar.png' : $user->avatar }}" alt="user avatar"
+            <img src="{{ $user->avatar == '' ? '/images/default-avatar.png' : $user->avatar }}" alt="user avatar"
                  style="width: 100px; height: 100px; border-radius: 100px">
         </div>
         @if($errors->any())

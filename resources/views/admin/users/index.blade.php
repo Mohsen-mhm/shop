@@ -22,7 +22,7 @@
             @foreach($users as $user)
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
-                    <td><img src="{{ $user->avatar == '' ? '/storage/avatars/default-avatar.png' : $user->avatar }}" alt="user avatar"
+                    <td><img src="{{ $user->avatar == '' ? '/images/default-avatar.png' : $user->avatar }}" alt="user avatar"
                              style="width: 40px; height: 40px; border-radius: 100px"></td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>

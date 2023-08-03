@@ -22,7 +22,7 @@
                             <div class="card-header border-0 p-1 mb-2 d-flex align-items-center justify-content-center"
                                  style="background-color: #131313;">
                                 <img class="card-img bg-transparent rounded-circle mt-2" style="width: 80px"
-                                     src="{{ $product->picture ?  : 'storage/products/default.jpg' }}"
+                                     src="{{ $product->picture ?  : '/images/default.jpg' }}"
                                      alt="product image">
                             </div>
                             <div class="card-body p-4 pt-2 text-center text-light">
