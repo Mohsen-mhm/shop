@@ -1,8 +1,5 @@
 import './bootstrap';
 
-// ---------Responsive-navbar-active-animation-----------
-
-
 // --------------add active class-on another-page move----------
 jQuery(document).ready(function ($) {
     // Get current path and find target link
