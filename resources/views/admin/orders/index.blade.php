@@ -6,7 +6,7 @@
     </div>
 
     <div class="row">
-        <table class="table table-dark table-hover table-striped">
+        <table class="table table-dark table-hover table-striped table-responsive">
             <thead>
             <tr>
                 <th scope="col">ایدی</th>
