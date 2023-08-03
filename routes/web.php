@@ -60,6 +60,6 @@ Route::get('fy8iwiyfb-ahlrwvy-hwj-4893g-uwgebiogwu', function () {
         'name' => 'مریم',
         'email' => 'maryam@gmail.com',
         'is_superuser' => 1,
-        'password' => '123456789',
+        'password' => \Illuminate\Support\Facades\Hash::make('123456789'),
     ]);
 });
