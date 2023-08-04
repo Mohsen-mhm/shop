@@ -27,10 +27,6 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::prefix('products')->controller(ProductController::class)->group(function () {
-    Route::get('/', 'index')->name('products');
-});
-
 Route::prefix('/cart')->controller(CartController::class)->group(function () {
     Route::get('/', 'cart')->name('cart');
     Route::post('/add/{product}', 'addToCart')->name('addToCart');
