@@ -22,14 +22,15 @@
             @foreach($products as $product)
                 <tr>
                     <th scope="row">{{ $product->id }}</th>
-                    <td><img src="{{ $product->avatar == '' ? '/images/default.jpg' : $product->avatar }}" alt="user avatar"
+                    <td><img src="{{ $product->picture ?  : '/images/default.jpg' }}" alt="user avatar"
                              style="width: 40px; height: 40px; border-radius: 100px"></td>
                     <td>{{ $product->title }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->inventory }}</td>
                     <td>
                         <div class="w-50 d-flex justify-content-evenly">
-                            <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-outline-primary btn-sm">ویرایش</a>
+                            <a href="{{ route('admin.products.edit', $product->id) }}"
+                               class="btn btn-outline-primary btn-sm">ویرایش</a>
                             <form action="{{ route('admin.products.destroy', $product->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
