@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
     <div class="container">
         @foreach($products->chunk(3) as $row)
             <div class="row">
