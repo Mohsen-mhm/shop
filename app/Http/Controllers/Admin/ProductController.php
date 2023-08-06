@@ -93,8 +93,9 @@ class ProductController extends Controller
             ]);
             $validDate['picture'] = "/storage/" . Storage::disk('public')->putFile('products', $imgValidated['picture']);
         } else {
-            $validDate['picture'] = '';
+            $validDate['picture'] = null;
         }
+
 
         Product::find($id)->update($validDate);
 
