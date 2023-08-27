@@ -36,7 +36,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @yield('css')
 </head>
-<body dir="rtl" class="bg-dark">
+<body dir="rtl" class="bg-light">
 <div id="app">
     @include('layouts.header')
 
