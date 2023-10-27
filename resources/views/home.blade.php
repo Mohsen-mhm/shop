@@ -3,15 +3,13 @@
 @section('content')
 
     <div class="container">
+        <div class="text-center mt-2 mb-2 d-flex flex-column text-light">
+            <h3 class="mb-3">کافی شاپ اشوان</h3>
+            <p>با منظره ای رویایی در بالاترین نقطه منطقه ، چشم اندازی زیبا و هوایی دلپذیر از تراس کافه اشوان غروب زیبای
+                خورشید که با رنگهای بنفش و نارنجی رنگ آمیزی شده است تا شما را به میهمانی ستاره ها ببریم.</p>
+        </div>
         @foreach($products->chunk(3) as $row)
-            @php
-                $index = array_rand($array);
-            @endphp
             <div class="row">
-                <div class="text-center mt-2 mb-2 d-flex flex-column text-light">
-                    <h3 class="mb-3">{{ $array[$index]['title'] }}</h3>
-                    <p>{{ $array[$index]['body'] }}</p>
-                </div>
                 @foreach($row as $product)
                     <div class="col-lg-4 mx-auto">
                         <div class="card rounded-10 border-0 shadow-lg cd-35 mx-auto mb-5"
