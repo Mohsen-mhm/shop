@@ -6,9 +6,3 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">درباره ما</a></li>
     </ul>
 </footer>
-<style>
-    .nav-item .nav-link.text-muted:hover {
-        transition: all linear 0.2s !important;
-        color: #ffc107 !important;
-    }
-</style>

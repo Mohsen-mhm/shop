@@ -51,8 +51,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" style="font-size: 16px"
-                           href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-secondary m-1"
-                                                                                    style="font-size: 15px"></i></a>
+                           href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i
+                                class="fad fa-user text-secondary m-1"
+                                style="font-size: 15px"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}
@@ -69,7 +70,8 @@
 </nav>
 
 <style>
-    .nav-item .nav-link:hover i{
+    .nav-item .nav-link:hover i,
+    .nav-item .nav-link:hover {
         transition: all linear 0.2s !important;
         color: #ffc107 !important;
     }
