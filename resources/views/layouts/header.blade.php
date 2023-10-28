@@ -20,40 +20,51 @@
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}<i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
-                    </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('register') }}">{{ __('عضویت') }}<i class="fad fa-user-plus text-warning m-1" style="font-size: 15px"></i></a>
+                            <a class="nav-link mx-1" style="font-size: 16px"
+                               href="{{ route('register') }}">{{ __('عضویت') }}<i
+                                    class="fad fa-user-plus text-warning m-1" style="font-size: 15px"></i></a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('login') }}">{{ __('ورود') }}<i class="fad fa-sign-in text-info m-1" style="font-size: 15px"></i></a>
+                            <a class="nav-link mx-1" style="font-size: 16px"
+                               href="{{ route('login') }}">{{ __('ورود') }}<i class="fad fa-sign-in text-info m-1"
+                                                                              style="font-size: 15px"></i></a>
                         </li>
                     @endif
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}
+                            <i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i
+                                class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}<i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-info m-1" style="font-size: 15px"></i></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">{{ __('خروج') }}<i class="fad fa-sign-out text-danger m-1" style="font-size: 15px"></i></a>
+                                                     document.getElementById('logout-form').submit();">{{ __('خروج') }}
+                            <i class="fad fa-sign-out text-danger m-1" style="font-size: 15px"></i></a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px"
+                           href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-info m-1"
+                                                                                    style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}
+                            <i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i
+                                class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
                     </li>
                 @endguest
             </ul>
