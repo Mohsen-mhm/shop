@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4 py-3" dir="ltr">
+<nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4 py-5" dir="ltr">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <i class="fas fa-lg fa-coffee text-warning"></i>
@@ -22,12 +22,12 @@
                 @guest
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('عضویت') }}</a>
+                            <a class="nav-link btn btn-sm btn-warning" href="{{ route('register') }}">{{ __('عضویت') }}</a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('ورود') }}</a>
+                            <a class="nav-link btn btn-sm btn-primary" href="{{ route('login') }}">{{ __('ورود') }}</a>
                         </li>
                     @endif
                 @else
