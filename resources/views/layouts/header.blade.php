@@ -20,20 +20,16 @@
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
                 @guest
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px"
-                               href="{{ route('register') }}">{{ __('عضویت') }}<i
-                                    class="fad fa-user-plus text-warning m-1" style="font-size: 15px"></i></a>
-                        </li>
-                    @endif
-                    @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px"
-                               href="{{ route('login') }}">{{ __('ورود') }}<i class="fad fa-sign-in text-info m-1"
-                                                                              style="font-size: 15px"></i></a>
-                        </li>
-                    @endif
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px"
+                           href="{{ route('register') }}">{{ __('عضویت') }}<i
+                                class="fad fa-user-plus text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px"
+                           href="{{ route('login') }}">{{ __('ورود') }}<i class="fad fa-sign-in text-secondary m-1"
+                                                                          style="font-size: 15px"></i></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}
                             <i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
@@ -47,7 +43,7 @@
                         <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">{{ __('خروج') }}
-                            <i class="fad fa-sign-out text-danger m-1" style="font-size: 15px"></i></a>
+                            <i class="fad fa-sign-out text-secondary m-1" style="font-size: 15px"></i></a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -55,7 +51,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" style="font-size: 16px"
-                           href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-info m-1"
+                           href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-secondary m-1"
                                                                                     style="font-size: 15px"></i></a>
                     </li>
                     <li class="nav-item">
@@ -73,7 +69,8 @@
 </nav>
 
 <style>
-    .dropdown-item:hover {
-        background: #2a313b;
+    .nav-item .nav-link:hover i{
+        transition: all linear 0.2s;
+        color: #ffc107;
     }
 </style>
