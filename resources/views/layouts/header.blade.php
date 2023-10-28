@@ -22,12 +22,12 @@
                 @guest
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-warning my-1" href="{{ route('register') }}">{{ __('عضویت') }}</a>
+                            <a class="btn btn-sm btn-outline-warning mx-1" href="{{ route('register') }}">{{ __('عضویت') }}</a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-primary my-1" href="{{ route('login') }}">{{ __('ورود') }}</a>
+                            <a class="btn btn-sm btn-outline-primary mx-1" href="{{ route('login') }}">{{ __('ورود') }}</a>
                         </li>
                     @endif
                 @else
