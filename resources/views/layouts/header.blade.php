@@ -70,7 +70,7 @@
 
 <style>
     .nav-item .nav-link:hover i{
-        transition: all linear 0.2s;
-        color: #ffc107;
+        transition: all linear 0.2s !important;
+        color: #ffc107 !important;
     }
 </style>
