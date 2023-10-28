@@ -20,41 +20,40 @@
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
                 @guest
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}<i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('register') }}"><i class="fad fa-user-plus text-warning m-1" style="font-size: 15px"></i>{{ __('عضویت') }}</a>
+                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('register') }}">{{ __('عضویت') }}<i class="fad fa-user-plus text-warning m-1" style="font-size: 15px"></i></a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('login') }}"><i class="fad fa-sign-in text-info m-1" style="font-size: 15px"></i>{{ __('ورود') }}</a>
+                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('login') }}">{{ __('ورود') }}<i class="fad fa-sign-in text-info m-1" style="font-size: 15px"></i></a>
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('home') }}">{{ __('خانه') }}<i class="fad fa-home text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('cart') }}">{{ __('سبد خرید') }}<i class="fad fa-shopping-cart text-secondary m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('profile.home') }}">{{ __('پروفایل') }}<i class="fad fa-user text-info m-1" style="font-size: 15px"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">{{ __('خروج') }}<i class="fad fa-sign-out text-danger m-1" style="font-size: 15px"></i></a>
 
-                        <div class="dropdown-menu dropdown-menu- text-center bg-dark border-secondary"
-                             aria-labelledby="navbarDropdown">
-                            <a href="{{ route('home') }}" class="dropdown-item text-light">{{ __('صفحه اصلی') }}</a>
-                            <a href="{{ route('profile.home') }}"
-                               class="dropdown-item text-light">{{ __('پروفایل') }}</a>
-                            <a href="{{ route('cart') }}" class="dropdown-item text-light">{{ __('سبد خرید') }}</a>
-
-                            <hr class="text-light m-1">
-                            <a class="dropdown-item text-light" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('خروج') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 @endguest
             </ul>

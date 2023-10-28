@@ -21,8 +21,8 @@
                                      alt="product image">
                             </div>
                             <div class="card-body p-4 pt-2 text-center text-light">
-                                <h5 class="pb-2 border-bottom"><b>{{ $product->title }}</b></h5>
-                                <p style="height: 48px" class="overflow-hidden border-bottom">{{ $product->description }}</p>
+                                <h5 class="pb-2 border-bottom border-secondary"><b>{{ $product->title }}</b></h5>
+                                <p style="height: 48px" class="pt-2 overflow-hidden border-bottom border-secondary">{{ $product->description }}</p>
                                 <div class="d-flex justify-content-around">
                                     <p>قیمت:</p>
                                     <b>{{ $product->price }}</b>
