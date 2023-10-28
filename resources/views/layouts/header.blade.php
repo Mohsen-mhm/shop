@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4" dir="ltr">
+<nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4 py-3" dir="ltr">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Shop') }}
+            <i class="fas fa-lg fa-coffee text-warning"></i>
+            {{ config('app.name', 'Ashvan Cafe') }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
