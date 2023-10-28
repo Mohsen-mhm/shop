@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4 py-4" dir="ltr">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fas fa-lg fa-coffee text-warning"></i>
+            <i class="fad fa-lg fa-mug-hot text-warning"></i>
             {{ config('app.name', 'Ashvan Cafe') }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,7 +27,7 @@
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-outline-primary mx-1" href="{{ route('login') }}">{{ __('ورود') }}</a>
+                            <a class="btn btn-sm btn-outline-info mx-1" href="{{ route('login') }}">{{ __('ورود') }}</a>
                         </li>
                     @endif
                 @else
