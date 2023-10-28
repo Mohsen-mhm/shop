@@ -16,7 +16,7 @@
                              style="width: 18rem; background-color: #131313;">
                             <div class="card-header border-0 p-1 mb-2 d-flex align-items-center justify-content-center"
                                  style="background-color: #131313;">
-                                <img class="card-img bg-transparent rounded-circle mt-2" style="width: 80px"
+                                <img class="card-img bg-transparent rounded-circle mt-2" style="width: 70px"
                                      src="{{ $product->picture ?  : '/images/default.jpg' }}"
                                      alt="product image">
                             </div>
