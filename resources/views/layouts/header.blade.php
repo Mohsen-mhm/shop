@@ -22,12 +22,12 @@
                 @guest
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" href="{{ route('register') }}"><i class="fad fa-user-plus text-warning"></i> {{ __('عضویت') }}</a>
+                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('register') }}"><i class="fad fa-user-plus text-warning m-0"></i>{{ __('عضویت') }}</a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link mx-1" href="{{ route('login') }}"><i class="fad fa-sign-in text-info"></i> {{ __('ورود') }}</a>
+                            <a class="nav-link mx-1" style="font-size: 16px" href="{{ route('login') }}"><i class="fad fa-sign-in text-info m-0"></i>{{ __('ورود') }}</a>
                         </li>
                     @endif
                 @else
