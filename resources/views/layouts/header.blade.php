@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark shadow-lg mb-4 py-4" dir="ltr">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fad fa-lg fa-mug-hot text-warning"></i>
+            <i class="fad fa-mug-hot text-warning" style="font-size: 30px"></i>
             {{ config('app.name', 'Ashvan Cafe') }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

@@ -8,6 +8,6 @@
 </footer>
 <style>
     .nav-item .nav-link.text-muted:hover {
-        color: #ffffff;
+        color: #ffffff !important;
     }
 </style>
