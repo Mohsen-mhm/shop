@@ -11,7 +11,7 @@
         @foreach($products->chunk(3) as $row)
             <div class="row">
                 @foreach($row as $product)
-                    <div class="col-lg-4 mx-auto mt-5 border border-bottom">
+                    <div class="col-lg-4 mx-auto mt-5 border-bottom">
                         <div class="card rounded-10 border-0 shadow-lg cd-35 mx-auto mb-5"
                              style="width: 18rem; background-color: #131313;">
                             <div class="card-header border-0 p-1 mb-2 d-flex align-items-center justify-content-center"

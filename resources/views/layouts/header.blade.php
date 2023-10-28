@@ -22,12 +22,12 @@
                 @guest
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-outline-warning mx-1" href="{{ route('register') }}">{{ __('عضویت') }}</a>
+                            <a class="nav-link mx-1" href="{{ route('register') }}"><i class="fad fa-user-plus text-warning"></i> {{ __('عضویت') }}</a>
                         </li>
                     @endif
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="btn btn-sm btn-outline-info mx-1" href="{{ route('login') }}">{{ __('ورود') }}</a>
+                            <a class="nav-link mx-1" href="{{ route('login') }}"><i class="fad fa-sign-in text-info"></i> {{ __('ورود') }}</a>
                         </li>
                     @endif
                 @else
@@ -37,9 +37,11 @@
                             {{ Auth::user()->name }}
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu- text-center bg-dark border-secondary" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu- text-center bg-dark border-secondary"
+                             aria-labelledby="navbarDropdown">
                             <a href="{{ route('home') }}" class="dropdown-item text-light">{{ __('صفحه اصلی') }}</a>
-                            <a href="{{ route('profile.home') }}" class="dropdown-item text-light">{{ __('پروفایل') }}</a>
+                            <a href="{{ route('profile.home') }}"
+                               class="dropdown-item text-light">{{ __('پروفایل') }}</a>
                             <a href="{{ route('cart') }}" class="dropdown-item text-light">{{ __('سبد خرید') }}</a>
 
                             <hr class="text-light m-1">
@@ -61,7 +63,7 @@
 </nav>
 
 <style>
-    .dropdown-item:hover{
+    .dropdown-item:hover {
         background: #2a313b;
     }
 </style>
