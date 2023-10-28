@@ -8,6 +8,7 @@
 </footer>
 <style>
     .nav-item .nav-link.text-muted:hover {
-        color: #ffffff !important;
+        transition: all linear 0.2s !important;
+        color: #ffc107 !important;
     }
 </style>
